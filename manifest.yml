@@ -1,0 +1,12 @@
+applications:
+- disk_quota: 1024M
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git#6c5d638e7800938e8b086900548cb36a81c752b0
+  host: carrierlookupapi
+  name: carrierlookupapi
+  path: .
+  domain: mybluemix.net
+  env:
+    CF_STAGING_TIMEOUT: 60
+    CF_STARTUP_TIMEOUT: 60
+  instances: 1
+  memory: 128M
